@@ -1,0 +1,388 @@
+/* Общие стили */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eef6f7;
+  color: #182146;
+}
+
+.section {
+  padding: 40px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #3b5c74;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Шапка */
+/* Навигационная панель */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding-bottom: 5px;
+  padding-top: 8px;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Стили для бургера */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+#slogan {
+  background-color: #6bbffb;
+  color: #fff;
+  padding: 20px;
+  border-radius: 2%;
+}
+/* Слоган */
+.slogan {
+  text-align: center;
+}
+
+.slogan h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* Преимущества */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.advantage {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #b1b1b2;
+  border-radius: 8px;
+}
+
+.advantage i {
+  font-size: 2em;
+  color: #6bbffb;
+  margin-bottom: 10px;
+}
+
+/* Варианты */
+/* .options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.option {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #b1b1b2;
+  border-radius: 8px;
+}
+
+.option img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+} */
+
+/* Галерея */
+
+/* КАРУСЕЛЬ */
+/* Основные стили */
+.carousel-container {
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-wrapper-outer {
+  display: flex;
+  align-items: center; /* Центрируем элементы по вертикали */
+}
+
+.carousel-wrapper {
+  display: flex;
+  overflow: auto;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* Занимает все доступное пространство между кнопками */
+}
+
+.carousel-item {
+  box-sizing: border-box;
+  padding: 10px;
+  flex: 0 0 50%; /* Два элемента на большом экране */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5%;
+}
+
+/* Кнопки */
+.carousel-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+  margin: 0 10px; /* Отступы от слайдов */
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Адаптивность */
+@media (max-width: 820px) {
+  .carousel-item {
+    flex: 0 0 100%; /* Один элемент на мобильных */
+  }
+}
+
+/* Цены */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #b1b1b2;
+  text-align: left;
+}
+
+th {
+  background-color: #b2e7f2;
+}
+
+#prices .text-prices {
+  text-align: justify;
+}
+
+#prices .vizov {
+  text-align: center;
+}
+
+#prices a {
+  color: black;
+  background-color: #b2e7f2;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 1.5px;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+#prices a:hover {
+  background-color: #b2e7f298;
+}
+
+/* Услуги и аксессуары */
+
+/* Общие стили для секции */
+.services-section {
+  padding: 20px;
+}
+
+.services-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Стили для карусели (desktop) */
+.services-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Для плавной прокрутки на iOS */
+}
+
+.service {
+  flex: 0 0 400px; /* Фиксированная ширина элемента, можно изменить */
+  width: 400px; /* Фиксированная ширина элемента, можно изменить */
+  padding: 20px;
+  border: 1px solid #b1b1b2;
+  border-radius: 8px;
+  text-align: center;
+  scroll-snap-align: start;
+  margin-right: 30px; /* Отступ между элементами */
+  box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+}
+
+/* Убираем последний отступ справа */
+.services-carousel > *:last-child {
+  margin-right: 0;
+}
+
+.service i {
+  font-size: 2em;
+  color: #6bbffb;
+  margin-bottom: 10px;
+}
+
+/* Скрываем полосу прокрутки */
+.services-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.services-carousel {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Адаптация для мобильных устройств (можно настроить по своему вкусу) */
+@media (max-width: 768px) {
+  .services-carousel {
+    /*  Не нужно ничего менять, карусель уже должна работать*/
+    padding: 0;
+  }
+
+  .service {
+    flex: 0 0 80%; /*  Занимает 80% ширины экрана */
+    width: 80%; /*  Занимает 80% ширины экрана */
+    margin-right: 10px;
+  }
+}
+
+/* #services ul,
+#accessories ul {
+  list-style: disc;
+  margin-left: 20px;
+} */
+
+/* Этапы установки */
+/* #installation-steps ol {
+  margin-left: 20px;
+} */
+
+/* Контакты */
+
+#contacts {
+  background-color: #3b5c74;
+}
+
+#contacts p {
+  margin-bottom: 10px;
+  color: white;
+}
+
+#contacts h2 {
+  color: white;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: white;
+}
+
+/* Подвал */
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Адаптивность */
+/* Навигационная панель */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin-right: 90px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* Анимация бургера */
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Преимущества */
+  .advantages-grid,
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+}
