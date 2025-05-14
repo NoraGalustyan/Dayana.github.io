@@ -43,7 +43,7 @@ h2 {
 }
 
 .logo img {
-  width: 150px;
+  width: 330px;
 }
 
 .nav-links {
@@ -245,6 +245,7 @@ th {
 .services-carousel {
   display: flex;
   overflow-x: auto;
+  margin-left: 30px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch; /* Для плавной прокрутки на iOS */
 }
@@ -257,7 +258,7 @@ th {
   border-radius: 8px;
   text-align: center;
   scroll-snap-align: start;
-  margin-right: 30px; /* Отступ между элементами */
+  margin-right: 20px; /* Отступ между элементами */
   box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
 }
 
@@ -341,10 +342,10 @@ footer {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 80px;
+    top: 86px;
     left: 0;
     background-color: #fff;
-    width: 100%;
+    width: 90.7%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
