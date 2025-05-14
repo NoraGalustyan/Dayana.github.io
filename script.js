@@ -26,6 +26,7 @@ const navSlide = () => {
 
 navSlide();
 
+// Галерея
 const carouselContainer = document.querySelector(".carousel-container");
 const carouselWrapper = document.querySelector(".carousel-wrapper");
 const carouselItems = document.querySelectorAll(".carousel-item");

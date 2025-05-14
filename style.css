@@ -86,23 +86,38 @@ h2 {
   text-align: center;
 }
 
-.slogan h1 {
-  font-size: 2.5em;
+.slogan h2 {
+  font-size: 2.2em;
   margin-bottom: 10px;
+  color: white;
 }
 
 /* Преимущества */
-.advantages-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+
+/* Стили для карусели преимуществ (аналогично секции услуг) */
+.advantages-carousel {
+  display: flex;
+  overflow-x: auto;
+  margin-left: 30px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Для плавной прокрутки на iOS */
 }
 
 .advantage {
-  text-align: center;
+  flex: 0 0 400px; /* Фиксированная ширина элемента, можно изменить */
+  width: 400px; /* Фиксированная ширина элемента, можно изменить */
   padding: 20px;
   border: 1px solid #b1b1b2;
   border-radius: 8px;
+  text-align: center;
+  scroll-snap-align: start;
+  margin-right: 20px; /* Отступ между элементами */
+  box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+}
+
+/* Убираем последний отступ справа */
+.advantages-carousel > *:last-child {
+  margin-right: 0;
 }
 
 .advantage i {
@@ -111,25 +126,52 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Варианты */
-/* .options-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+/* Скрываем полосу прокрутки */
+.advantages-carousel::-webkit-scrollbar {
+  display: none;
 }
 
-.option {
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #b1b1b2;
-  border-radius: 8px;
+.advantages-carousel {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-.option img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-} */
+/* Адаптация для мобильных устройств (можно настроить по своему вкусу) */
+@media (max-width: 768px) {
+  .advantages-carousel {
+    /*  Не нужно ничего менять, карусель уже должна работать*/
+    padding: 0;
+  }
+
+  .advantage {
+    flex: 0 0 80%; /*  Занимает 80% ширины экрана */
+    width: 80%; /*  Занимает 80% ширины экрана */
+    margin-right: 10px;
+  }
+}
+
+/* Desktop version */
+@media (min-width: 769px) {
+  .advantages-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    overflow-x: unset;
+    scroll-snap-type: none;
+    -webkit-overflow-scrolling: auto;
+    margin-left: 0;
+  }
+
+  .advantage {
+    flex: 0 0 auto;
+    width: auto;
+    margin-right: 0;
+  }
+
+  .advantages-carousel > *:last-child {
+    margin-right: 0;
+  }
+}
 
 /* Галерея */
 
@@ -189,33 +231,18 @@ h2 {
   }
 }
 
-/* Цены */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-th,
-td {
-  padding: 10px;
-  border: 1px solid #b1b1b2;
-  text-align: left;
-}
-
-th {
-  background-color: #b2e7f2;
-}
-
-#prices .text-prices {
+/* О нас */
+#aboutme .text-prices {
   text-align: justify;
+  text-indent: 4%;
+  margin: auto;
 }
 
-#prices .vizov {
+#aboutme .vizov {
   text-align: center;
 }
 
-#prices a {
+#aboutme a {
   color: black;
   background-color: #b2e7f2;
   text-decoration: none;
@@ -225,7 +252,7 @@ th {
   padding: 10px;
 }
 
-#prices a:hover {
+#aboutme a:hover {
   background-color: #b2e7f298;
 }
 
@@ -297,17 +324,6 @@ th {
   }
 }
 
-/* #services ul,
-#accessories ul {
-  list-style: disc;
-  margin-left: 20px;
-} */
-
-/* Этапы установки */
-/* #installation-steps ol {
-  margin-left: 20px;
-} */
-
 /* Контакты */
 
 #contacts {
@@ -315,12 +331,24 @@ th {
 }
 
 #contacts p {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: white;
+}
+#contacts p a {
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+}
+#contacts p a:hover {
+  color: rgb(222, 212, 212);
 }
 
 #contacts h2 {
   color: white;
+}
+
+.contact i {
+  margin-right: 10px;
 }
 
 .social-links a {
