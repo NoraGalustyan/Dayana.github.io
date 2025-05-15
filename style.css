@@ -325,7 +325,7 @@ h2 {
 }
 
 /* Отзывы */
-.reviews-section {
+/* .reviews-section {
   padding: 20px;
   text-align: center;
 }
@@ -334,7 +334,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden; /* Crucial for the carousel */
+  overflow: hidden; 
   position: relative;
   max-width: 1000px;
   margin: 20px auto;
@@ -344,10 +344,10 @@ h2 {
   display: flex;
   transition: transform 0.3s ease;
   padding: 10px;
-  gap: 20px; /* Space between cards */
+  gap: 20px; 
   overflow-x: auto;
-  scroll-snap-type: x mandatory; /* Enable snap scrolling */
-  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch; 
 }
 
 .review-card {
@@ -356,9 +356,9 @@ h2 {
   padding: 20px;
   text-align: left;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  flex: 0 0 auto; /* Don't grow/shrink, take up auto width */
-  width: calc(33.333% - 20px); /* Three cards in a row minus gap */
-  scroll-snap-align: start; /* Snap cards to the start */
+  flex: 0 0 auto; 
+  width: calc(33.333% - 20px); 
+  scroll-snap-align: start; 
   box-sizing: border-box;
   width: 320px;
   height: auto;
@@ -384,22 +384,22 @@ h2 {
   color: #ffffff;
 }
 
-/* Media Queries for Responsiveness */
+
 
 @media (max-width: 768px) {
   .review-card {
-    width: calc(50% - 20px); /* Two cards on medium screens */
+    width: calc(50% - 20px); 
   }
 }
 
 @media (max-width: 576px) {
   .review-card {
-    width: 100%; /* One card per row on small screens */
+    width: 100%; 
   }
   .reviews-carousel {
     margin: 10px auto;
   }
-}
+} */
 
 /* Контакты */
 

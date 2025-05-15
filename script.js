@@ -100,28 +100,28 @@ function handleSwipe() {
 
 // Отзывы
 
-document.addEventListener("DOMContentLoaded", function () {
-  const carouselContainer = document.querySelector(".carousel-containers");
-  const reviewCards = document.querySelectorAll(".review-card");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const carouselContainer = document.querySelector(".carousel-containers");
+//   const reviewCards = document.querySelectorAll(".review-card");
 
-  let currentIndex = 0;
+//   let currentIndex = 0;
 
-  function updateCarousel() {
-    const cardWidth = reviewCards[0].offsetWidth;
-    const scrollAmount = cardWidth * currentIndex;
-    carouselContainer.scrollTo({
-      left: scrollAmount,
-      behavior: "smooth",
-    });
-  }
+//   function updateCarousel() {
+//     const cardWidth = reviewCards[0].offsetWidth;
+//     const scrollAmount = cardWidth * currentIndex;
+//     carouselContainer.scrollTo({
+//       left: scrollAmount,
+//       behavior: "smooth",
+//     });
+//   }
 
-  prevButton.addEventListener("click", () => {
-    currentIndex = Math.max(currentIndex - 1, 0);
-    updateCarousel();
-  });
+//   prevButton.addEventListener("click", () => {
+//     currentIndex = Math.max(currentIndex - 1, 0);
+//     updateCarousel();
+//   });
 
-  nextButton.addEventListener("click", () => {
-    currentIndex = Math.min(currentIndex + 1, reviewCards.length - 1);
-    updateCarousel();
-  });
-});
+//   nextButton.addEventListener("click", () => {
+//     currentIndex = Math.min(currentIndex + 1, reviewCards.length - 1);
+//     updateCarousel();
+//   });
+// });
