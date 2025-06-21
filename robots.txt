@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://den-okna.ru/sitemap.xml
+Host: https://den-okna.ru/
